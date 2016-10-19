@@ -1,9 +1,31 @@
 import Vue from 'vue'
-import App from './App'
+import Router from 'vue-router'
+import App from './components/App.vue'
+import HomePage from './components/HomePage.vue'
+import LoginPage from './components/LoginPage.vue'
+import AboutPage from './components/AboutPage.vue'
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
+Vue.use(Router)
+
+// use routes instead of map function
+var router = new Router({
+  routes: [
+    {
+      path: '/home/:param',
+      component: HomePage
+    },
+    {
+      path: '/login/:param',
+      component: LoginPage
+    },
+    {
+      path: '/about/:id',
+      component: AboutPage
+    }
+  ]
 })
+
+// use codeline as below instead of start function
+new Vue(
+  Vue.util.extend({router}, App)
+).$mount('#app')
