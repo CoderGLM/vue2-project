@@ -6,17 +6,19 @@
       <a href="#/login/123">login</a>
       <a href="#/about/123">about</a>
     </div>
-    <router-view
-      class="view"
-      keep-alive
-      transition
-      transition-mode="out-in">
-    </router-view>
+    <transition name="expand">
+      <router-view
+        class="view"
+        keep-alive
+        transition="test"
+        transition-mode="out-in">
+      </router-view>
+    </transition>
   </div>
 </template>
 
 <style lang="scss">
-  header {
+header {
     box-sizing: border-box;
     width: 100%;
     height: 3rem;
@@ -27,5 +29,16 @@
     text-align: center;
     color: #fff;
     background: #3b5998;
-  }
+ }
+.expand-enter-active {
+  transition: all .3s ease;
+}
+.expand-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.expand-enter, .expand-leave-active {
+  padding-left: 10px;
+  opacity: 0;
+}
+
 </style>
