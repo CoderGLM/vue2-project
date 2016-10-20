@@ -6,18 +6,22 @@
       <a href="#/login/123">login</a>
       <a href="#/about/123">about</a>
     </div>
-    <transition name="expand">
-      <router-view
-        class="view"
-        keep-alive>
-      </router-view>
-    </transition>
+    <div class=".container">
+      <transition name="expand">
+        <router-view
+          class="view"
+          keep-alive>
+        </router-view>
+      </transition>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-#wrapper {
+.container {
   position: relative;
+  height: 90rem;
+  overflow: hidden;
 }
 header {
     box-sizing: border-box;
@@ -30,24 +34,23 @@ header {
     text-align: center;
     color: #fff;
     background: #3b5998;
- }
-.expand-enter-active {
-  transition: left .25s linear;
-  position: absolute;
-  left: 0;
 }
-.expand-leave {
+.view {
   position: absolute;
+  top: 10rem;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+.expand-enter-active, .expand-leave-active {
+  transition: transform .5s linear;
 }
 .expand-enter {
-  position: absolute;
-  left: -100%;
+  transform: translate3d(-100%, 0, 0);
 }
+
 .expand-leave-active {
-  transition: left .25s linear;
-  position: absolute;
-  left: 100%;
+  transform: translate3d(100%, 0, 0);
 }
 
 </style>
