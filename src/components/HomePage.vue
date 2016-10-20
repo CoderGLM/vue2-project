@@ -1,5 +1,5 @@
 <template>
-<div>{{ desc }}</div>
+<div class="yellow page">{{ desc }}</div>
 </template>
 
 <script>
@@ -25,6 +25,12 @@ export default {
 $fontSize: 20px;
 
 div {
-  font-size: $fontSize
+  font-size: $fontSize;
+}
+.yellow {
+  background: yellow;
+}
+.page {
+  height: 10rem;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div>{{ desc }}</div>
+<div class="green page">{{ desc }}</div>
 </template>
 
 <script>
@@ -22,9 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-$fontSize: 20px;
-
-div {
-  font-size: $fontSize
+.green {
+  background: green;
 }
 </style>

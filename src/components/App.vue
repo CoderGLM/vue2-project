@@ -9,15 +9,16 @@
     <transition name="expand">
       <router-view
         class="view"
-        keep-alive
-        transition="test"
-        transition-mode="out-in">
+        keep-alive>
       </router-view>
     </transition>
   </div>
 </template>
 
 <style lang="scss">
+#wrapper {
+  position: relative;
+}
 header {
     box-sizing: border-box;
     width: 100%;
@@ -31,14 +32,22 @@ header {
     background: #3b5998;
  }
 .expand-enter-active {
-  transition: all .3s ease;
+  transition: left .25s linear;
+  position: absolute;
+  left: 0;
+}
+.expand-leave {
+  position: absolute;
+  left: 0;
+}
+.expand-enter {
+  position: absolute;
+  left: -100%;
 }
 .expand-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.expand-enter, .expand-leave-active {
-  padding-left: 10px;
-  opacity: 0;
+  transition: left .25s linear;
+  position: absolute;
+  left: 100%;
 }
 
 </style>
