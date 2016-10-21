@@ -6,7 +6,7 @@
       <a href="#/login/123">login</a>
       <a href="#/about/123">about</a>
     </div>
-    <div class=".container">
+    <div class="container">
       <transition name="expand">
         <router-view
           class="view"
