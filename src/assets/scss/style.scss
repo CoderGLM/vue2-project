@@ -1,0 +1,28 @@
+$borderRadius: 0.8rem !defaut;
+
+body {
+  font-size: 62.5%; // 16 * 62.5% = 10
+}
+header {
+  height: 4.4rem;
+}
+.flex {
+  display: flex;
+  width: 0;
+}
+.group {
+}
+.group .last {
+  background-clip: padding-box;
+  border-bottom-left-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+}
+.group .first {
+  background-clip: padding-box;
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+}

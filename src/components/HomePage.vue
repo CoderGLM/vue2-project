@@ -63,7 +63,7 @@ div {
   height: 90rem
 }
 .yellow {
-  background: yellow;
+  background: lightgray;
 }
 .page {
   height: 10rem;

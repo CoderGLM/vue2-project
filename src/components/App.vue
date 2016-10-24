@@ -1,19 +1,11 @@
 <template>
   <div id="wrapper">
-    <header>CoderGLM</header>
-    <div>
-      <a href="#/home/123">home</a>
-      <a href="#/login/123">login</a>
-      <a href="#/about/123">about</a>
-    </div>
-    <div class="container">
-      <transition name="expand">
+    <transition name="expand">
         <router-view
           class="view"
           keep-alive>
         </router-view>
-      </transition>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -45,12 +37,7 @@ header {
 .expand-enter-active, .expand-leave-active {
   transition: transform .5s linear;
 }
-.expand-enter {
-  transform: translate3d(-100%, 0, 0);
+.expand-enter, .expand-leave-active {
+  opacity: 0;
 }
-
-.expand-leave-active {
-  transform: translate3d(100%, 0, 0);
-}
-
 </style>
