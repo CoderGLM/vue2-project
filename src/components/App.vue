@@ -9,7 +9,14 @@
   </div>
 </template>
 
+<script>
+import '../assets/scss/style.scss'
+</script>
+
 <style lang="scss">
+/*@import 'assets/scss/style.scss';
+@import 'assets/scss/reset.scss';*/
+
 .container {
   position: relative;
   height: 90rem;
