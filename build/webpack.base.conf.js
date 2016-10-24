@@ -53,10 +53,6 @@ module.exports = {
         loader: 'vue'
       },
       {
-        test: /\.scss$/,
-        loader: ["style", "css", "sass"]
-      },
-      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,
@@ -83,11 +79,6 @@ module.exports = {
         }
       }
     ]
-  },
-  vue: {
-    loaders: {
-      scss: ['vue-style-loader', 'sass', 'sass'].join('!')
-    }
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
