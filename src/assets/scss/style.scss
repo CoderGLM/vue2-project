@@ -1,15 +1,14 @@
- 
- $borderRadius: 0.8rem;
+@import './_variables.scss';
 
 body {
   font-size: 62.5%; // 16 * 62.5% = 10
 }
-header {
+.page-header {
+  box-sizing: border-box;
   height: 4.4rem;
 }
 .flex {
   display: flex;
-  width: 0;
 }
 .group {
 }
