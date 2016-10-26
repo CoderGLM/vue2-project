@@ -1,0 +1,15 @@
+@mixin flex() {
+  display: flex;
+}
+
+@mixin flex-center() {
+  @include flex();
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-horizontal-center() {
+  @include flex();
+  align-items: stretch;
+  justify-content: center;
+}
