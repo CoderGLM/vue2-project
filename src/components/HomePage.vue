@@ -2,12 +2,7 @@
   <div>
     <PageHeader id="header">
       <nav id="top-menu">
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==0}" @click="topMenu.selectedIndex=0"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==1}" @click="topMenu.selectedIndex=1"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==2}" @click="topMenu.selectedIndex=2"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==3}" @click="topMenu.selectedIndex=3"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==4}" @click="topMenu.selectedIndex=4"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==5}" @click="topMenu.selectedIndex=5"><div class="top-menu-item-icon"></div></a>
+        <a v-for="n in 6" class="top-menu-item" :class="{pressed: topMenu.selectedIndex==n-1}" @click="topMenu.selectedIndex=n-1"><div class="top-menu-item-icon"></div></a>
       </nav>
     </PageHeader>
   </div>
