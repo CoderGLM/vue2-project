@@ -16,7 +16,7 @@ export default {
 
 header {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   height: $height-top-menu;
   font-size: $font-size-lg;

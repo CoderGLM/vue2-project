@@ -2,12 +2,12 @@
   <div>
     <PageHeader id="header">
       <nav id="top-menu">
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
-        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==0}" @click="topMenu.selectedIndex=0"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==1}" @click="topMenu.selectedIndex=1"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==2}" @click="topMenu.selectedIndex=2"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==3}" @click="topMenu.selectedIndex=3"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==4}" @click="topMenu.selectedIndex=4"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item" :class="{pressed: topMenu.selectedIndex==5}" @click="topMenu.selectedIndex=5"><div class="top-menu-item-icon"></div></a>
       </nav>
     </PageHeader>
   </div>
@@ -18,6 +18,13 @@ import PageHeader from './shared/PageHeader'
 
 export default {
   name: 'HomePage',
+  data () {
+    return {
+      topMenu: {
+        selectedIndex: 0
+      }
+    }
+  },
   components: {
     PageHeader
   }
@@ -30,13 +37,28 @@ export default {
 
 $top-menu-icon-positions: (
   (
-    normal: (-22px, -78px),
+    normal: -22px -78px,
+    pressed: -63px -78px
   ),
   (
-    normal: (-123px, -124px),
+    normal: -123px -124px,
+    pressed: -63px -78px
   ),
   (
-    normal: (-123px, -124px),
+    normal: -268px -78px,
+    pressed: -63px -78px
+  ),
+  (
+    normal: -350px -78px,
+    pressed: -82px -124px
+  ),
+  (
+    normal: -186px -78px,
+    pressed: -227px -78px
+  ),
+  (
+    normal: -104px -78px,
+    pressed: -145px -78px
   )
 );
 
@@ -56,10 +78,15 @@ $top-menu-icon-positions: (
   background: url("../assets/images/icons_sprite1.png") no-repeat transparent;
   background-size: 401px 190px;
 }
-@for $i from 1 through 3 {
+@for $i from 1 through 6 {
   .top-menu-item:nth-of-type(#{$i}) {
     div {
       background-position: map-get(nth($top-menu-icon-positions, $i), normal);
+    }
+    &.pressed {
+      div {
+        background-position: map-get(nth($top-menu-icon-positions, $i), pressed);
+      }
     }
   }
 }
