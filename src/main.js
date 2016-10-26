@@ -15,12 +15,16 @@ var router = new Router({
       component: HomePage
     },
     {
-      path: '/login/:param',
+      path: '/login',
       component: LoginPage
     },
     {
       path: '/about/:id',
       component: AboutPage
+    },
+    {
+      path: '*',
+      redirect: '/login'
     }
   ]
 })
