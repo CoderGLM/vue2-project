@@ -8,10 +8,10 @@
      </div>
      <form class="login-form">
        <div>
-         <input class="login-form-text" type="text" placeholder="Email or Phone">
+         <input class="login-form-text" type="email" placeholder="Email or Phone"  autocapitalize="off">
          <input class="login-form-text" type="text" placeholder="Password">
        </div>
-       <button class="login-form-btn">Log in</button>
+       <router-link to="/home/2"><button class="login-form-btn">Log in</button></router-link>
      </form>
      <div class="account">
        <a class="account-create-btn">Create New Account</a>
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import PageHeader from 'components/shared/header.vue'
+import PageHeader from 'components/shared/PageHeader.vue'
 
 export default {
   name: 'LoginPage',

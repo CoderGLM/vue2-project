@@ -1,12 +1,13 @@
 <template>
-  <header>
+  <header :id="id" :class='cls'>
     <slot></slot>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'PageHeader'
+  name: 'PageHeader',
+  props: ['id', 'cls']
 }
 </script>
 
@@ -15,9 +16,9 @@ export default {
 
 header {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 0.7rem;
+  height: $height-top-menu;
   font-size: $font-size-lg;
   color: #fff;
   font-family: $font-family-sans-serif;

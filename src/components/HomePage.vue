@@ -1,71 +1,67 @@
 <template>
-  <div style="position: relative">
-    <transition name="expand">
-    <!--<div v-show="show" class="tran-item yellow page">{{ desc }}</div>-->
-      <component :is="view">
-      </component>
-    </transition>
-    <input style="position:absolute;top:2rem;" type="button" @click="toggle" value="toggle me">
+  <div>
+    <PageHeader id="header">
+      <nav id="top-menu">
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+        <a class="top-menu-item"><div class="top-menu-item-icon"></div></a>
+      </nav>
+    </PageHeader>
   </div>
 </template>
 
 <script>
+import PageHeader from './shared/PageHeader'
+
 export default {
   name: 'HomePage',
-  data () {
-    return {
-      view: 'one',
-      desc: 'This is a HomePage'
-    }
-  },
-  methods: {
-    toggle: function () {
-      this.view = this.view === 'one' ? 'two' : 'one'
-    }
-  },
   components: {
-    one: {
-      template: '<div class="view yellow"></div>'
-    },
-    two: {
-      template: '<div class="purple view"></div>'
-    }
-  },
-  route: {
-    data ({ to }) {
-      document.title = to.params.id
-      return {
-        desc: 'Enter HomePage'
-      }
-    }
+    PageHeader
   }
 }
 </script>
 
-<style lang="scss">
-$fontSize: 20px;
+<style lang="scss" scoped>
+@import "./src/assets/scss/_variables.scss";
+@import "./src/assets/scss/mixins/_flex.scss";
 
-div {
-  font-size: $fontSize;
+$top-menu-icon-positions: (
+  (
+    normal: (-22px, -78px),
+  ),
+  (
+    normal: (-123px, -124px),
+  ),
+  (
+    normal: (-123px, -124px),
+  )
+);
+
+#header {
 }
-.tran-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90rem;
+#top-menu {
+  display: flex;
+  flex: 1;
 }
-.view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90rem
+.top-menu-item {
+  @include flex-center();
+  flex: 1;
 }
-.yellow {
-  background: lightgray;
+.top-menu-item-icon {
+  width: 44px;
+  height: 40px;
+  background: url("../assets/images/icons_sprite1.png") no-repeat transparent;
+  background-size: 401px 190px;
 }
-.page {
-  height: 10rem;
+@for $i from 1 through 3 {
+  .top-menu-item:nth-of-type(#{$i}) {
+    div {
+      background-position: map-get(nth($top-menu-icon-positions, $i), normal);
+    }
+  }
 }
+
 </style>
