@@ -1,10 +1,32 @@
 <template>
-  <div>
+  <div id="wrapper">
     <PageHeader id="header">
       <nav id="top-menu">
         <a v-for="n in 6" class="top-menu-item" :class="{pressed: topMenu.selectedIndex==n-1}" @click="topMenu.selectedIndex=n-1"><div class="top-menu-item-icon"></div></a>
       </nav>
     </PageHeader>
+    <div id="content">
+      <div class="content-item">
+        <div class="status">
+          <div class="status-top">
+            <div class="status-portrait"></div>
+            <p>
+              <span>CoderGLM<span><br/>
+              <time>2016年10月27日 11: 04</time>
+            </p>
+            <a class="status-top-arrow"></a>
+          </div>
+          <p class="status-content">
+            Hi there, how would you pass animated values through redux connected components? I am building a react-native app and I would have liked to animate my navigation bar N depending on an animated value of another component C: I would like to update N's background color depending on C's height which is managed by an animated value which is modified when the user drags it.
+          </p>
+          <div class="status-bottom">
+            <button>Like</button>|
+            <button>Comment</button>|
+            <button>Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,6 +79,9 @@ $top-menu-icon-positions: (
   )
 );
 
+#wrapper {
+  background-color: $gray;
+}
 #header {
 }
 #top-menu {
@@ -83,6 +108,57 @@ $top-menu-icon-positions: (
         background-position: map-get(nth($top-menu-icon-positions, $i), pressed);
       }
     }
+  }
+}
+.status {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+.status-top {
+  @include flex-horizontal-center();
+
+  @at-root .status-portrait {
+    width: 44px;
+    height: 44px;
+    margin: {
+      right: .25rem;
+      bottom: .25rem;
+    }
+    background: $gray;
+  }
+  p {
+    flex: 1;
+  }
+  @at-root .status-top-arrow {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: {
+      bottom: 1px solid $gray-light;
+      left: 1px solid $gray-light;
+    }
+    transform: rotateZ(-45deg);
+  }
+}
+.status-content {
+  padding: {
+    top: .2rem;
+    bottom: .2rem;
+  }
+  font-family: $font-family-serif;
+  line-height: $line-height-sm;
+  text-align: justify;
+  text-justify:distribute;
+}
+.status-bottom {
+  @include flex-center();
+  margin: .5rem -.5rem .5rem -.5rem;
+  color: #5e5e5e;
+  background-color: #d6d8db;
+  button {
+    flex: 1;
+    height: 1.6rem;
+    border: 0;
+    background-color: transparent;
   }
 }
 
