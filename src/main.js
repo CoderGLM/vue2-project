@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex from 'vuex' // http://vuex.vuejs.org/en/structure.html
 import Router from 'vue-router'
 import Resource from 'vue-resource'
 import App from './components/App.vue'
@@ -6,6 +7,7 @@ import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
 
+Vue.use(Vuex)
 Vue.use(Router)
 Vue.use(Resource)
 
