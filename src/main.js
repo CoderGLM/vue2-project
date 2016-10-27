@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Resource from 'vue-resource'
 import App from './components/App.vue'
 import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
 
 Vue.use(Router)
+Vue.use(Resource)
 
 // use routes instead of map function
 var router = new Router({
