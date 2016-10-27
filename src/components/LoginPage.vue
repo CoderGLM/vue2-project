@@ -2,7 +2,7 @@
  <div id="wrapper">
    <page-header>CoderGLM</page-header>
    <div id="content">
-     <div class="flex" id="login-tip">
+     <div id="login-tip">
         <i></i>
         <span>Get Facebook for iPhone and browse faster.</span>
      </div>
@@ -70,6 +70,7 @@ export default {
   background-color: #eceff5;
 }
 #login-tip {
+  display: flex;
   align-items: center;
   padding: 0.4rem;
   font-size: 1rem;
@@ -108,7 +109,7 @@ export default {
       border-bottom-width: 0px;
     }
   }
-  .login-form-btn {
+  @at-root .login-form-btn {
     @extend .btn--lightpurple;
     width: 100%;
     margin-top: $spacer-sm;
