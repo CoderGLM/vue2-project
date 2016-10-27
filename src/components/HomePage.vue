@@ -44,6 +44,21 @@ export default {
   },
   components: {
     PageHeader
+  },
+  created () {
+    // fetch data
+    this.fetchData()
+  },
+  watch: {
+    '$route': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      const url = 'http://211.149.193.19:8080/api/customers'
+      this.$http.jsonp(url).then((data) => {
+        console.log(data)
+      })
+    }
   }
 }
 </script>
