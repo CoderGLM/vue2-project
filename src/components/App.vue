@@ -15,7 +15,8 @@ import 'assets/scss/style.scss'
 
 <style lang="scss">
 .expand-enter-active, .expand-leave-active {
-  transition: transform .5s linear;
+  position: absolute;
+  transition: all .5s linear;
 }
 .expand-enter, .expand-leave-active {
   opacity: 0;
