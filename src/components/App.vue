@@ -11,22 +11,9 @@
 <script>
 import 'assets/scss/reset.scss'
 import 'assets/scss/style.scss'
-import Vuex from 'vuex'
-
-const store = new Vuex.Store({
-  state: {
-    count: 1
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-})
 
 export default {
-  name: 'App',
-  store
+  name: 'App'
 }
 </script>
 

@@ -15,7 +15,7 @@ Vue.use(Resource)
 var router = new Router({
   routes: [
     {
-      path: '/home/:param',
+      path: '/home',
       component: HomePage
     },
     {
