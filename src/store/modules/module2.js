@@ -1,8 +1,9 @@
 import * as types from '../types'
 
 const mutations = {
-  [types.SUB] (state, { delta }) {
-    state.counter -= delta
+  [types.RESET] (state) {
+    // module2 can't access counter in module1 actually.
+    state.counter = 50
   }
 }
 

@@ -1,12 +1,15 @@
 import * as types from '../types'
 
 const state = {
-  counter: 0
+  counter: 100
 }
 
 const mutations = {
-  [types.ADD] (state, { delta }) {
+  [types.ADD] (state, delta) {
     state.counter += delta
+  },
+  [types.SUB] (state, delta) {
+    state.counter -= delta
   }
 }
 
