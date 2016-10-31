@@ -11,7 +11,7 @@
          <input class="login-form-text" type="email" placeholder="Email or Phone"  autocapitalize="off">
          <input class="login-form-text" type="text" placeholder="Password">
        </div>
-       <router-link to="/home/2"><button class="login-form-btn">Log in</button></router-link>
+       <router-link to="/home"><button class="login-form-btn">Log in</button></router-link>
      </form>
      <div class="account">
        <a class="account-create-btn">Create New Account</a>
