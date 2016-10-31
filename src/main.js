@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex' // http://vuex.vuejs.org/en/structure.html
+// http://vuex.vuejs.org/en/structure.html
 import Router from 'vue-router'
 import Resource from 'vue-resource'
 import store from './store'
@@ -7,8 +7,8 @@ import App from './components/App.vue'
 import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
+import CounterPage from './components/CounterPage.vue'
 
-Vue.use(Vuex)
 Vue.use(Router)
 Vue.use(Resource)
 
@@ -26,6 +26,10 @@ var router = new Router({
     {
       path: '/about/:id',
       component: AboutPage
+    },
+    {
+      path: '/counter',
+      component: CounterPage
     },
     {
       path: '*',
