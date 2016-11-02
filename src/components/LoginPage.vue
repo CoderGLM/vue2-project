@@ -16,7 +16,7 @@
      <div class="account">
        <a class="account-create-btn">Create New Account</a>
        <div class="account-link">
-         <a>Forget Password?</a><span> - </span><a>HelpCenter</a>
+         <a>Forget Password?</a><span> - </span><a :href="authUrl">HelpCenter</a>
        </div>
      </div>
    </div>
@@ -46,11 +46,17 @@
 
 <script>
 import PageHeader from 'components/shared/PageHeader.vue'
+import * as Const from '../const'
 
 export default {
   name: 'LoginPage',
   components: {
     PageHeader
+  },
+  data () {
+    return {
+      authUrl: Const.authorizeUrl
+    }
   }
 }
 </script>
