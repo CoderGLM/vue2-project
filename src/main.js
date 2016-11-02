@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Resource from 'vue-resource'
 import store from './store'
 import App from './components/App.vue'
+import AuthPage from './components/AuthPage.vue'
 import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
@@ -15,6 +16,10 @@ Vue.use(Resource)
 // use routes instead of map function
 var router = new Router({
   routes: [
+    {
+      path: '/auth',
+      component: AuthPage
+    },
     {
       path: '/home',
       component: HomePage
