@@ -15,6 +15,10 @@
  */
 
 // http://javascript.ruanyifeng.com/nodejs/express.html
+
+const CLIENT_ID = '8fda6183ba583635f0e5'
+const CLIENT_SECRET = '6402f910e027326d07edda48ccb3e2573cb55a77'
+
 var request = require('request')
 var express = require('express')
 var app = express()
@@ -26,7 +30,7 @@ var router = express.Router()
 router.get('/access_token/:code', (req, res) => {
   var { code } = req.params
 
-  var url = `https://github.com/login/oauth/access_token?client_id=8fda6183ba583635f0e5&client_secret=6402f910e027326d07edda48ccb3e2573cb55a77&code=${code}`
+  var url = `https://github.com/login/oauth/access_token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}`
   var options = {
     url: url,
     headers: {
