@@ -41,6 +41,7 @@ export default {
           }).then(data => {
             this.content = data
           })
+          this.$router.push({ path: '/user' })
         }).catch((err) => {
           console.log(err)
         })
