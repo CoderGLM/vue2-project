@@ -13,6 +13,8 @@ import CounterPage from './components/CounterPage.vue'
 Vue.use(Router)
 Vue.use(Resource)
 
+//  router2.x文档：http://router.vuejs.org/en/index.html
+//
 // use routes instead of map function
 var router = new Router({
   routes: [
