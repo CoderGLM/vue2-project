@@ -8,6 +8,7 @@ import AuthPage from './components/AuthPage.vue'
 import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
+import UserPage from './components/UserPage.vue'
 import CounterPage from './components/CounterPage.vue'
 
 Vue.use(Router)
@@ -33,6 +34,10 @@ var router = new Router({
     {
       path: '/about/:id',
       component: AboutPage
+    },
+    {
+      path: '/user',
+      component: UserPage
     },
     {
       path: '/counter',
