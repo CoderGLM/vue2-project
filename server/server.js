@@ -26,6 +26,8 @@ var app = express()
 var port = 8888
 var router = express.Router()
 
+// 获取access_token
+//
 // http://stackoverflow.com/questions/298745/how-do-i-send-a-cross-domain-post-request-via-javascript
 router.get('/access_token/:code', (req, res) => {
   var { code } = req.params
