@@ -20,7 +20,7 @@ export default {
 <style lang="scss">
 .expand-enter-active, .expand-leave-active {
   position: absolute;
-  transition: all .5s linear;
+  transition: all .25s linear;
 }
 .expand-enter, .expand-leave-active {
   opacity: 0;
