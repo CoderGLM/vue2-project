@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import 'assets/scss/reset.scss'
-import 'assets/scss/style.scss'
-
 export default {
   name: 'App'
 }
 </script>
 
 <style lang="scss">
+@import '../assets/scss/reset.scss';
+@import '../assets/scss/style.scss';
+
 .expand-enter-active, .expand-leave-active {
   position: absolute;
   transition: all .25s linear;
