@@ -21,9 +21,7 @@
           </p>
           <div class="status-bottom">
             <button>Like</button>|
-            <router-link to="/counter">
-              <button>Comment</button>
-            </router-link>|
+            <button>Comment</button>|
             <button>Share</button>
           </div>
         </div>
