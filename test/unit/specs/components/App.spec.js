@@ -6,8 +6,10 @@
  *
  *  Vue unit test: https://vuejs.org/guide/unit-testing.html
  *
+ *  每个单元测试必须回答的 5 个问题《奇舞周刊》：http://www.75team.com/post/5-questions-every-unit-test-must-answer.html
+ *
  */
-import App from 'src/components/App'
+import App from 'components/App'
 
 describe('App.vue', () => {
   it('should export the correct `name`', () => {
