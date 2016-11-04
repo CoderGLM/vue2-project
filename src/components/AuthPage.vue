@@ -7,7 +7,7 @@
 <script>
 // 开发者：https://github.com/settings/applications/431804
 
-import * as Const from '../const'
+import Api from 'src/api'
 
 export default {
   name: 'AuthPage',
@@ -21,30 +21,17 @@ export default {
     const code = window.location.href.match(rcode)[1]
     window.localStorage.setItem('code', code)
 
-    const url = Const.getAccessToken + code
-    this.$http
-        .get(url)
-        .then(response => {
-          return response.json()
-        })
-        .then(json => {
-          const accessToken = json.access_token
+    Api.misc.getToken().then(json => {
+      const accessToken = json.access_token
 
-          if (!accessToken) {
-            this.content = '授权失败'
-          }
-
-          window.localStorage.setItem('access_token', accessToken)
-          console.log(`access_token = ${accessToken}`)
-          this.$http.get(Const.getUserInfo + accessToken).then(response => {
-            return response.json()
-          }).then(data => {
-            this.content = data
-          })
-          this.$router.push({ path: '/user' })
-        }).catch((err) => {
-          console.log(err)
-        })
+      if (!accessToken) {
+        this.content = '授权失败'
+      }
+      window.localStorage.setItem('access_token', accessToken)
+      this.$router.push({ path: '/user' })
+    }).catch((err) => {
+      console.log(err)
+    })
   }
 }
 </script>
