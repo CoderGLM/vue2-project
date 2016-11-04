@@ -13,4 +13,8 @@ describe('App.vue', () => {
   it('should export the correct `name`', () => {
     expect(App.name).toMatch(/^App$/)
   })
+
+  it('has a created hook', () => {
+    expect(typeof App.created).toBe('function')
+  })
 })
