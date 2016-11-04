@@ -3,3 +3,11 @@ export const isBigger = (state) => {
   return state.module1.counter > 100
 }
 
+/*
+ *
+ *  Users Module
+ *
+ */
+export const authUserInfo = (state) => {
+  return state.usersMod.profile
+}

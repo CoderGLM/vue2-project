@@ -2,8 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import * as actions from './actions'
 import * as getters from './getters'
-import module1 from './modules/module1'
-import module2 from './modules/module2'
+import usersMod from './modules/usersMod'
 
 const debug = process.env.NODE_ENV !== 'production'
 
@@ -13,8 +12,7 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    module1,
-    module2
+    usersMod
   },
   strict: debug
 })
