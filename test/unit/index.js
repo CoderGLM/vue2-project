@@ -6,6 +6,18 @@ Function.prototype.bind = require('function-bind')
 const testsContext = require.context('./specs', true, /\.spec$/)
 testsContext.keys().forEach(testsContext)
 
+/*
+ *
+ *  this `plyfill` is required, if remove it, you will encounter error like :
+ *
+ *  ** PhantomJS 2.1.1 (Mac OS X 0.0.0) ERROR                          **
+ *  ** Error: [vuex] vuex requires a Promise polyfill in this browser. **
+ *
+ *  added by gengliming
+ *
+ */
+require("es6-promise").polyfill()
+
 // require all src files except main.js for coverage.
 // you can also change this to match only the subset of files that
 // you want coverage for.
