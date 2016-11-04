@@ -16,7 +16,7 @@ testsContext.keys().forEach(testsContext)
  *  added by gengliming
  *
  */
-require("es6-promise").polyfill()
+require('es6-promise').polyfill()
 
 // require all src files except main.js for coverage.
 // you can also change this to match only the subset of files that
