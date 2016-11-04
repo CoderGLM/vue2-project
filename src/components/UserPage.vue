@@ -109,26 +109,26 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import PageHeader from './shared/PageHeader'
-import Api from 'src/api'
 
 export default {
   name: 'UserPage',
   components: {
     PageHeader
   },
-  data () {
-    return {
-      profile: {}
-    }
+  computed: {
+    ...mapGetters({
+      profile: 'authUserInfo'
+    })
+  },
+  methods: {
+    ...mapActions([
+      'getAuthUserInfo'
+    ])
   },
   mounted () {
-    const { users } = Api
-    console.log(users)
-    // console.log(Api)
-    users.getAuthUserInfo().then(json => {
-      this.profile = json
-    })
+    this.getAuthUserInfo()
   }
 }
 </script>
