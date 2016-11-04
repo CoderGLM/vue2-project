@@ -128,7 +128,8 @@ export default {
     ])
   },
   mounted () {
-    this.getAuthUserInfo()
+    const token = window.localStorage.getItem('access_token')
+    this.getAuthUserInfo(token)
   }
 }
 </script>

@@ -19,11 +19,10 @@ export default {
   created () {
     const rcode = /code=([a-zA-Z0-9]+)/
     const code = window.location.href.match(rcode)[1]
-    window.localStorage.setItem('code', code)
 
     Api.misc.getToken(code).then(json => {
       const accessToken = json.access_token
-
+      console.log(accessToken)
       if (!accessToken) {
         this.content = '授权失败'
       }

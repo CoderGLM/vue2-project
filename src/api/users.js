@@ -47,8 +47,7 @@ import Vue from 'vue'
  *  }
  */
 
-function getAuthUserInfo () {
-  const token = window.localStorage.getItem('access_token')
+function getAuthUserInfo (token) {
   if (!token) {
     throw new TypeError('access_token not found')
   }
