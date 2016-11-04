@@ -21,7 +21,7 @@ export default {
     const code = window.location.href.match(rcode)[1]
     window.localStorage.setItem('code', code)
 
-    Api.misc.getToken().then(json => {
+    Api.misc.getToken(code).then(json => {
       const accessToken = json.access_token
 
       if (!accessToken) {
