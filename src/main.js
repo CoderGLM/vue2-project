@@ -9,7 +9,6 @@ import HomePage from './components/HomePage.vue'
 import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
 import UserPage from './components/UserPage.vue'
-import CounterPage from './components/CounterPage.vue'
 
 Vue.use(Router)
 Vue.use(Resource)
@@ -38,10 +37,6 @@ var router = new Router({
     {
       path: '/user',
       component: UserPage
-    },
-    {
-      path: '/counter',
-      component: CounterPage
     },
     {
       path: '*',
