@@ -21,4 +21,4 @@ export const authorizeUrl = `https://github.com/login/oauth/authorize?client_id=
 //
 //
 export const getAccessToken = `${transferDomain}/access_token/`
-export const getUserInfo = `${apiDomain}/user?access_token=`
+export const getUserInfo = `${apiDomain}/user`
