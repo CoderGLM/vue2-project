@@ -26,7 +26,6 @@ describe('Api.users', () => {
     users.getAuthUserInfo('3f3c4d1ac7c55d89b48bcdbe6d519f5ba3167b78').then(json => {
       expect(typeof json).toBe('object')
     }).catch(error => {
-      expect(typeof error).tbBe('object')
     }).finally(done)
   })
 })

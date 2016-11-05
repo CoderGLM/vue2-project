@@ -52,14 +52,11 @@ function getAuthUserInfo (token) {
     throw new TypeError('access_token not found')
   }
 
-  console.log(token)
-
   return new Promise((resolve, reject) => {
-    console.log(Vue.http.get)
-    Vue.http.get(`${Const.getUserInfo}?access_token=${token}`).then(response => response.json()).then(json => {
+    Vue.http.get(`${Const.getUserInfo}?access_token=${token}1`).then(response => response.json()).then(json => {
       resolve(json)
     }).catch(error => {
-      reject(error)
+      reject(error.body)
     })
   })
 }
