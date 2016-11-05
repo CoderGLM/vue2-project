@@ -55,6 +55,7 @@ function getAuthUserInfo (token) {
   console.log(token)
 
   return new Promise((resolve, reject) => {
+    console.log(Vue.http.get)
     Vue.http.get(`${Const.getUserInfo}?access_token=${token}`).then(response => response.json()).then(json => {
       resolve(json)
     }).catch(error => {
