@@ -6,25 +6,27 @@
       </nav>
     </PageHeader>
     <div id="content">
-      <div class="content-item">
-        <div class="status">
-          <div class="status-top">
+      <div class="content-item" role="main">
+
+        <article class="status">
+          <header class="status-top">
             <div class="status-portrait"></div>
             <p>
               <span>CoderGLM<span><br/>
               <time>2016年10月27日 11: 04</time>
             </p>
             <a class="status-top-arrow"></a>
-          </div>
+          </header>
           <p class="status-content">
             Hi there, how would you pass animated values through redux connected components? I am building a react-native app and I would have liked to animate my navigation bar N depending on an animated value of another component C: I would like to update N's background color depending on C's height which is managed by an animated value which is modified when the user drags it.
           </p>
-          <div class="status-bottom">
+          <footer class="status-bottom">
             <button>Like</button>|
             <button>Comment</button>|
             <button>Share</button>
-          </div>
-        </div>
+          </footer>
+        </article>
+
       </div>
     </div>
   </div>
