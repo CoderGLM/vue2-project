@@ -67,10 +67,14 @@ export default {
 
 #wrapper {
   min-height: 567px;
+  text-align: center;
   background-color: #fff;
 }
-#content {
+#content, footer {
   max-width: 41.6rem;
+  margin: 0 auto;
+}
+#content {
   padding: 0.8rem;
   padding-bottom: 3rem;
   background-color: #eceff5;
