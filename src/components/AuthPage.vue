@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>{{ content }}</h1>
+  <div id="wrapper">
+    <h1 class="tip">{{ content }}<span>.</span><span>.</span><span>.</span></h1>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   name: 'AuthPage',
   data () {
     return {
-      content: '授权页面'
+      content: '正在授权，请稍后'
     }
   },
   created () {
@@ -34,3 +34,43 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@keyframes dot2 {
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@keyframes dot3 {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%,-50%);
+  -webkit-box-reflect: below 0 linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2) 90%);
+
+  span {
+    &:nth-of-type(2) {
+      animation-name: dot2;
+    }
+    &:nth-of-type(3) {
+      animation-name: dot3;
+    }
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+</style>
