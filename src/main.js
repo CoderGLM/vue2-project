@@ -3,12 +3,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Resource from 'vue-resource'
 import store from './store'
-import App from './components/App.vue'
-import AuthPage from './components/AuthPage.vue'
-import HomePage from './components/HomePage.vue'
-import LoginPage from './components/LoginPage.vue'
-import AboutPage from './components/AboutPage.vue'
+import App from './components/App'
+import AuthPage from './components/AuthPage'
+import HomePage from './components/HomePage'
+import LoginPage from './components/LoginPage'
+import AboutPage from './components/AboutPage'
 import UserPage from './components/UserPage.vue'
+import ShoppingPage from './components/ShoppingPage'
 
 import LocalStorage from './plugins/LocalStorage'
 
@@ -40,6 +41,10 @@ var router = new Router({
     {
       path: '/user',
       component: UserPage
+    },
+    {
+      path: '/shopping',
+      component: ShoppingPage
     },
     {
       path: '*',
