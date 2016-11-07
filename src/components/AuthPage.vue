@@ -8,6 +8,7 @@
 // 开发者：https://github.com/settings/applications/431804
 
 import Api from 'src/api'
+import Vue from 'vue'
 
 export default {
   name: 'AuthPage',
@@ -26,7 +27,7 @@ export default {
       if (!accessToken) {
         this.content = '授权失败'
       }
-      window.localStorage.setItem('access_token', accessToken)
+      Vue.localStorage.setItem('access_token', accessToken)
       this.$router.push({ path: '/user' })
     }).catch((err) => {
       console.log(err)

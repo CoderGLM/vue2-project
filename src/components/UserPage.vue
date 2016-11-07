@@ -109,6 +109,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapGetters, mapActions } from 'vuex'
 import PageHeader from './shared/PageHeader'
 
@@ -128,7 +129,7 @@ export default {
     ])
   },
   mounted () {
-    const token = window.localStorage.getItem('access_token')
+    const token = Vue.localStorage.getItem('access_token')
     this.getAuthUserInfo(token)
   }
 }

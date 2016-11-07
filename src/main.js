@@ -10,8 +10,11 @@ import LoginPage from './components/LoginPage.vue'
 import AboutPage from './components/AboutPage.vue'
 import UserPage from './components/UserPage.vue'
 
+import LocalStorage from './plugins/LocalStorage'
+
 Vue.use(Router)
 Vue.use(Resource)
+Vue.use(LocalStorage)
 
 //  router2.x文档：http://router.vuejs.org/en/index.html
 //
