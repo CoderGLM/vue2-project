@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <header class="nav-bar">
-      <button>
+      <button @click="showNav=!showNav">
         <svg class="octicon octicon-three-bars" aria-hidden="true" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
       </button>
       <div class="nav-bar-title">
@@ -12,6 +12,14 @@
       <button>
         <svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 14 16" width="17"><path d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path></svg>
       </button>
+      <nav class="nav-bar-tabs" v-show="showNav">
+        <ul>
+          <li>Dashboard</li>
+          <li>Explore</li>
+          <li>Profile</li>
+          <li>Sign out</li>
+        </ul>
+      </nav>
     </header>
 
     <div class="reponav-wrapper">
@@ -115,6 +123,11 @@ import PageHeader from './shared/PageHeader'
 
 export default {
   name: 'UserPage',
+  data () {
+    return {
+      showNav: false
+    }
+  },
   components: {
     PageHeader
   },
@@ -181,6 +194,26 @@ svg {
   @at-root .nav-bar-title {
     flex: 1;
     text-align: center;
+  }
+
+  @at-root .nav-bar-tabs {
+    position: absolute;
+    top: $height-top-menu;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #rgba(0,0,0,0.15);
+    box-shadow: 0 8px 10px rgba(0,0,0,0.15);
+
+    ul {
+      color: $color-link;
+      background-color: #fff;
+      list-style: none;
+
+      li {
+        padding: 1rem;
+      }
+    }
   }
 }
 .reponav-wrapper {
