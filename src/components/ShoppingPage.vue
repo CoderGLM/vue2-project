@@ -53,17 +53,28 @@ export default {
     PageHeader
   },
   mounted () {
+    let headerHeight = 44
     window.addEventListener('scroll', (e) => {
       for (let i = 2; i >= 0; i--) {
-        if (typeof this.$refs[`tag${i}`].getBoundingClientRect === 'undefined') continue
+        //
+        // top is relative to viewport.
+        //
         let top = this.$refs[`tag${i}`].getBoundingClientRect().top
-        if (window.scrollY >= top) {
-          console.log(`win.scrollY=${window.scrollY},top=${top}`)
+        if (top <= headerHeight) {
           this.curMenu = i
           break
         }
       }
     }, false)
+    //
+    //  BTW, Maybe it's not relevant to my code above, but it's valuable. Take a look at :
+    //
+    //  scrollY/scrollX VS pageYOffset/pageXOffset
+    //
+    //  Scripts requiring high cross-browser compatibility can use `window.pageXOffset` and `window.pageYOffset` 
+    //
+    //  instead of `window.scrollX` and `window.scrollY`
+    //
   }
 }
 </script>
