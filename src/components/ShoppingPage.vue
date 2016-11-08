@@ -59,6 +59,8 @@ export default {
         //
         // top is relative to viewport.
         //
+        // reference: https://developer.mozilla.org/en/docs/Web/API/Element/getBoundingClientRect
+        //
         let top = this.$refs[`tag${i}`].getBoundingClientRect().top
         if (top <= headerHeight) {
           this.curMenu = i
