@@ -40,17 +40,12 @@
 </template>
 
 <script>
-import PageHeader from './shared/PageHeader'
-
 export default {
   name: 'ShoppingPage',
   data () {
     return {
       curMenu: 0
     }
-  },
-  components: {
-    PageHeader
   },
   mounted () {
     let headerHeight = 44
