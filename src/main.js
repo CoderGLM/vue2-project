@@ -8,8 +8,10 @@ import AuthPage from './components/AuthPage'
 import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
 import AboutPage from './components/AboutPage'
-import UserPage from './components/UserPage.vue'
-import ShoppingPage from './components/ShoppingPage'
+import UserPage from './components/UserPage'
+
+import WedgetsPage from './components/wedgets/WedgetsPage'
+import ShoppingPage from './components/wedgets/ShoppingPage'
 
 import LocalStorage from './plugins/LocalStorage'
 
@@ -43,8 +45,15 @@ var router = new Router({
       component: UserPage
     },
     {
-      path: '/shopping',
-      component: ShoppingPage
+      path: '/wedgets',
+      component: WedgetsPage,
+      // Nested routes: https://router.vuejs.org/en/essentials/nested-routes.html
+      children: [
+        {
+          path: 'shopping',
+          component: ShoppingPage
+        }
+      ]
     },
     {
       path: '*',
