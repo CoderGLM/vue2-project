@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <h1 class="tip">{{ content }}<span>.</span><span>.</span><span>.</span></h1>
+    <h1 class="tip">{{ content }}<span class="dotting"></span></h1>
   </div>
 </template>
 
@@ -60,18 +60,28 @@ export default {
   font-size: 3rem;
   transform: translate(-50%,-50%);
   -webkit-box-reflect: below 0 linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2) 90%);
-
-  span {
-    &:nth-of-type(2) {
-      animation-name: dot2;
-    }
-    &:nth-of-type(3) {
-      animation-name: dot3;
-    }
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+}
+/*
+ *  参考：http://www.zhangxinxu.com/wordpress/2014/12/css3-animation-dotting-loading/
+ */
+.dotting {
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  line-height: 2px;
+  box-sizing: border-box;
+  padding-left: 3px;
+  padding-right: 2px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  animation: dot 4s infinite step-start both;
 }
 
+@keyframes dot {
+  25% { border-color: transparent; background-color: transparent; } /* 0 */
+  50% { border-right-color: transparent; background-color: transparent; } /* 1 */
+  75% { border-right-color: transparent; } /* 2 */
+}
 </style>
