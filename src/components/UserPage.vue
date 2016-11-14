@@ -28,7 +28,7 @@
       </nav>
     </header>
 
-    <div class="reponav-wrapper">
+    <section class="reponav-wrapper">
       <nav class="reponav">
         <a class="reponav-item selected">Overview</a>
         <a class="reponav-item">Repositories <span v-html="profile.public_repos"></span></a>
@@ -36,7 +36,7 @@
         <a class="reponav-item" :href="profile.followers_url">Followers <span v-html="profile.followers">0</span></a>
         <a class="reponav-item" :href="profile.following_url">Following <span v-html="profile.following">0</span></a>
       </nav>
-    </div>
+    </section>
 
     <section class="profile-header">
       <a class="profile-header-portrait" :href="profile.avatar_url">
