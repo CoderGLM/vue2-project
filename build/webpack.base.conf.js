@@ -84,7 +84,7 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
-    // Why it works for external sass files and only config sass in `vue` tag?
+    // Why it works for external sass files, but configured only here.
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [
       require('autoprefixer')({

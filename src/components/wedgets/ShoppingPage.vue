@@ -23,7 +23,6 @@
             <li class="category-content-item" v-for="n in 20">{{ n*2 }}</li>
           </ul>
         </article>
-
       </div>
     </div>
     <aside class="side-bar">
