@@ -31,7 +31,9 @@
     <section class="reponav-wrapper">
       <nav class="reponav">
         <a class="reponav-item selected">Overview</a>
-        <a class="reponav-item">Repositories <span v-html="profile.public_repos"></span></a>
+        <router-link to="/repos">
+          <a class="reponav-item">Repositories <span v-html="profile.public_repos"></span></a>
+        </router-link>
         <a class="reponav-item">Stars <span v-html="profile.public_repos">0</span></a>
         <a class="reponav-item" :href="profile.followers_url">Followers <span v-html="profile.followers">0</span></a>
         <a class="reponav-item" :href="profile.following_url">Following <span v-html="profile.following">0</span></a>
