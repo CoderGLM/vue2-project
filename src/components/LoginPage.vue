@@ -1,45 +1,32 @@
 <template>
  <div id="wrapper">
-   <page-header>CoderGLM</page-header>
-   <div id="content">
-     <div id="login-tip">
-        <i></i>
-        <span>Get Facebook for iPhone and browse faster.</span>
-     </div>
-     <form class="login-form">
+   <header>
+     <a>
+       <svg aria-hidden="true" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+     </a>
+     <h1>Github</h1>
+     <a></a>
+   </header>
+   <section class="login-form tl">
+     <h1>Sign in to Github</h1>
+     <div class="pl1 pr1">
+       <label class="db">Username or email</label>
        <div>
-         <input class="login-form-text" type="email" placeholder="Email or Phone"  autocapitalize="off">
-         <input class="login-form-text" type="text" placeholder="Password">
+         <input class="db" type="text" placeholder="呆的邮箱或用户名">
        </div>
-       <router-link to="/home"><button class="login-form-btn">Log in</button></router-link>
-     </form>
-     <div class="account">
-       <a class="account-create-btn">Create New Account</a>
-       <div class="account-link">
-         <a>Forget Password?</a><span> - </span><a :href="authUrl">HelpCenter</a>
+       <label class="db">Password<a href="http://gengliming.com">(forgot password)</a></label>
+       <div class="mb1">
+         <input class="db" type="text" placeholder="呆的密码">
        </div>
+       <a class="submit mb1 tc" :href="authUrl">Sign in</a>
      </div>
-   </div>
-   <footer class="login-footer">
-     <table>
-       <tr>
-         <td>English(US)</td>
-         <td>中文(简体)</td>
-       </tr>
-       <tr>
-         <td>日本语</td>
-         <td>Español</td>
-       </tr>
-       <tr>
-         <td>Português (Brasil)</td>
-         <td>中文(简体)</td>
-       </tr>
-       <tr>
-         <td>Français (France)</td>
-         <td>+</td>
-       </tr>
-     </table>
-     <address>mailto: 779793115@qq.com</address>
+   </section>
+   <footer>
+     <a>
+       <svg class="bgCur" aria-hidden="true" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+     </a>
+     <span></span>
+     <a>Desktop version</a>
    </footer>
  </div>
 </template>
@@ -64,108 +51,122 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/style.scss';
 @import '../assets/scss/_variables.scss';
+@import '../assets/scss/mixins/_flex.scss';
+
+$spacer-min: 1rem;
+$spacer-mid: 2rem;
+$border-radius: 1px;
+
+a {
+  text-decoration: none;
+}
+
+.db {
+  display: block !important;
+}
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.ml1 {
+  margin-left: 1rem;
+}
+.mr1 {
+  margin-right: 1rem;
+}
+.mb1 {
+  margin-bottom: 1rem;
+}
+.pl1 {
+  padding-left: 1rem;
+}
+.pr1 {
+  padding-right: 1rem;
+}
 
 #wrapper {
   min-height: 567px;
+  font: 1rem/1.42 BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: bold;
   text-align: center;
   background-color: #fff;
 }
-#content, footer {
-  max-width: 41.6rem;
-  margin: 0 auto;
-}
-#content {
-  padding: 0.8rem;
-  padding-bottom: 3rem;
-  background-color: #eceff5;
-}
-#login-tip {
+
+header,
+.header {
+  @include flex-horizontal-center();
+  height: $height-top-menu;
   display: flex;
-  align-items: center;
-  padding: 0.4rem;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  color: #3b5998;
-  border: 1px solid #e2c822;
-  border-radius: $border-radius;
-  background-color: $yellow-lighter;
-  -webkit-tap-highlight-color: rgba(255,255,255,0);
-
-  i {
-    flex-shrink: 0;
-    height: 2rem;
-    width: 1.2rem;
-    display: inline-block;
-    margin-left: 0.7rem;
-    margin-right: 1rem;
-    background: url(../assets/images/mobile_icon.png) no-repeat $yellow-lighter;
-    background-position: -19px -22px;
-    background-size: 104px 55px;
-  }
-}
-.login-form {
-  padding-top: $spacer;
-
-  > div {
-    border-radius: $border-radius/2;
-    overflow: hidden;
-  }
-  .login-form-text {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #e5e5e5;
-
-    &:first-child {
-      border-bottom-width: 0px;
-    }
-  }
-  @at-root .login-form-btn {
-    @extend .btn--lightpurple;
-    width: 100%;
-    margin-top: $spacer-sm;
-    font-weight: bold;
-  }
-}
-.account {
   text-align: center;
-  padding-top: 2rem;
-  color: #fff;
-
-  .account-create-btn {
-    @extend .btn--green;
-    height: 3.6rem;
-    padding: 0.6rem 1.6rem;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.35);
-    box-shadow: inset 0 0 1px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.3), 0 1px 2px -1px rgba(0,0,0,.7);
+  border-bottom: 1px solid $gray-lighter;
+  background-color: $gray-lightest;
+  a {
+    @include flex-center();
+    padding: 1rem;
   }
-  .account-link {
-    margin-top: 1.5rem;
-    font-size: 0.6rem;
-    color: #7596c8;
+  h1 {
+    @include flex-center();
+    flex: 1;
+    font-size: 2rem;
   }
 }
-.login-footer {
-  padding: 1rem;
-  width: 100%;
-  font-size: 0.6rem;
-  color: #576b95;
-  background-color: #fff;
 
-  %tmp {
+.login-form {
+  margin: 2rem;
+  border: 1px solid $gray-lighter;
+  h1 {
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    background-color: #586873;
+  }
+  label {
+    padding: 1rem 0 1rem 0.5rem;
+  }
+  input, .submit {
+    display: inline-block;
     width: 100%;
-    color: #90949c;
-    text-align: center;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
   }
-  table {
-    @extend %tmp;
-    td {
-      padding: 0.2rem;
-    }
+  .submit {
+    color: #000;
+    box-sizing: content-box;
+    background: linear-gradient(#fafafa, #eaeaea) no-repeat;
   }
-  address {
-    @extend %tmp;
-    margin-top: 1rem;
-    text-align: center;
+  input {
+    box-sizing: border-box;
+    padding: 0.6rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
   }
 }
+
+footer,
+.footer {
+  @include flex-horizontal-center();
+  margin: {
+    left: $spacer-mid;
+    right: $spacer-mid;
+  }
+  color: $gray-light;
+  a {
+    @include flex-center();
+  }
+  span {
+    flex: 1;
+  }
+  svg {
+    fill: currentColor;
+  }
+}
+
+
 </style>
