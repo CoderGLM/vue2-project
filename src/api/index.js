@@ -5,8 +5,10 @@
 
 import misc from './misc'
 import users from './users'
+import repos from './repos'
 
 export default {
   misc,
-  users
+  users,
+  repos
 }
