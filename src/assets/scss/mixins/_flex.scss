@@ -1,15 +1,15 @@
-@mixin flex() {
+.flex {
   display: flex;
 }
 
 @mixin flex-center() {
-  @include flex();
+  @extend .flex;
   align-items: center;
   justify-content: center;
 }
 
 @mixin flex-horizontal-center() {
-  @include flex();
+  @extend .flex;
   align-items: stretch;
   justify-content: center;
 }
