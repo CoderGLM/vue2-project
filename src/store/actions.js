@@ -14,3 +14,15 @@ export const getAuthUserInfo = ({ commit }, token) => {
   })
 }
 
+/*
+ *
+ *  Repositories Module
+ *
+ */
+export const getRepos = ({ commit }, token) => {
+  Api.repos.getRepos(token).then(json => {
+    commit(types.GetRepos, json)
+  }).catch(error => {
+    console.log(error)
+  })
+}
