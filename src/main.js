@@ -9,6 +9,7 @@ import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
 import AboutPage from './components/AboutPage'
 import UserPage from './components/UserPage'
+import Repos from './components/Repos'
 
 import WedgetsPage from './components/wedgets/WedgetsPage'
 import ShoppingPage from './components/wedgets/ShoppingPage'
@@ -43,6 +44,10 @@ var router = new Router({
     {
       path: '/user',
       component: UserPage
+    },
+    {
+      path: '/repos',
+      component: Repos
     },
     {
       path: '/wedgets',
