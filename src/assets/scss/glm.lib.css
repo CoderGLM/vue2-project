@@ -1,0 +1,121 @@
+/* Positioning */
+.abs { position: absolute!important; }
+.fixed { position: fixed!important; }
+.rel { position: relative!important; }
+
+/* Box-model */
+.dn { display: none!important; }
+.db { display: block!important; }
+.di { display: inline!important; }
+.dib { display: inline-block!important; }
+.dt { display: table!important; }
+
+.w1of1 { width: 100%!important; }
+.w1of10 { width: 10%!important; }
+.w1of8 { width: 12.5%!important; }
+.w1of4 { width: 25%!important; }
+.w1of3 { width: 33.333333333333333%!important; }
+.w1of2 { width: 50%!important; }
+
+.m0 { margin: 0; }
+.m1 { margin: 1rem; }
+.m2 { margin: 2rem; }
+.m3 { margin: 3rem; }
+.m0p5 { margin: .5rem; }
+.mt0p5 { margin-top: .5rem; }
+.mt1 { margin-top: 1rem; }
+.mt2 { margin-top: 2rem; }
+.mt3 { margin-top: 3rem; }
+.mr0p5 { margin-right: .5rem; }
+.mr1 { margin-right: 1rem; }
+.mr2 { margin-right: 2rem; }
+.mr3 { margin-right: 3rem; }
+.mb0p5 { margin-bottom: .5rem; }
+.mb1 { margin-bottom: 1rem; }
+.mb2 { margin-bottom: 2rem; }
+.mb3 { margin-bottom: 3rem; }
+.ml0p5 { margin-left: .5rem; }
+.ml1 { margin-left: 1rem; }
+.ml2 { margin-left: 2rem; }
+.ml3 { margin-left: 3rem; }
+
+.p0 { padding: 0; }
+.p0p5 { padding: .5rem; }
+.p1 { padding: 1rem; }
+.pt0p5 { padding-top: .5rem; }
+.pt1 { padding-top: 1rem; }
+.pt2 { padding-top: 2rem; }
+.pr0p5 { padding-right: .5rem; }
+.pr1 { padding-right: 1rem; }
+.pr2 { padding-right: 2rem; }
+.pb0p5 { padding-bottom: .5rem; }
+.pb1 { padding-bottom: 1rem; }
+.pb2 { padding-bottom: 2rem; }
+.pl0p5 { padding-left: .5rem; }
+.pl1 { padding-left: 1rem; }
+.pl2 { padding-left: 2rem; }
+
+.fn { float: none!important; }
+.fl { float: left!important; }
+.fr { float: right!important; }
+
+.clear { *zoom: 1; }
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+/* Typography */
+.sans-serif { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+.serif { font-family: Georgia, "Times New Roman", Times, serif; }
+.monospace { font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace }
+
+.fs0 { font-size: 0; }
+.fs12 { font-size: 12px; }
+.fs16 { font-size: 16px; }
+.fs24 { font-size: 24px; }
+.fs-n { font-size: 1rem; }
+.fs-lg { font-size: 1.25rem; }
+.fs-sm { font-size: .875rem; }
+.fs-xs { font-size: .75rem; }
+
+.fwn { font-weight: normal!important; }
+.fwb { font-weight: bold!important; }
+
+.lh1p5 { line-height: 1.5;  }
+.lh1p2 { line-height: 1.2;  }
+
+.clr0 { color: #000; }
+.clr3 { color: #333; }
+.clr6 { color: #666; }
+.clr9 { color: #999; }
+.clrc { color: #ccc; }
+
+.hl { text-align: left!important; }
+.hc { text-align: center!important; }
+.hr { text-align: right!important; }
+
+.vt { vertical-align: top!important; }
+.vtt { vertical-align: text-top!important; }
+.vm { vertical-align: middle!important; }
+.vbl { vertical-align: baseline!important; }
+.vtb { vertical-align: text-bottom!important; }
+.vb { vertical-align: bottom!important;}
+
+.tdn { text-decoration: none; }
+
+/* Visual */
+.bg0 { background-color: #000; }
+.bg3 { background-color: #333; }
+.bg6 { background-color: #666; }
+.bg9 { background-color: #999; }
+.bgc { background-color: #ccc; }
+
+/* misc */
+.oh { overflow: hidden; }
+.os { overflow: scroll; }
+.oa { overflow: auto; }
