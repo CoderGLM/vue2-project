@@ -8,10 +8,12 @@
  *
  */
 
-@import './_variables.scss';
-@import './mixins/_flex.scss';
-@import './mixins/_clearfix.scss';
-@import './reset.scss';
+@import './_variables';
+@import './mixins/_flex';
+@import './mixins/_clearfix';
+@import './mixins/_userSelect';
+@import './glm.lib';
+@import './reset';
 
 html,
 body {
@@ -62,6 +64,16 @@ a { text-decoration: none; }
 .flex0 {
   flex: 0;
 }
+.flex-box--center,.flex-box-hori {
+  @extend .df;
+  justify-content: center;
+}
+.flex-box--center {
+  align-items: center;
+}
+.flex-box--hori {
+  align-items: stretch;
+}
 
 /**************/
 /* Components */
@@ -71,17 +83,18 @@ a { text-decoration: none; }
 //
 //
 .nav-bar {
+  position: relative;
   display: flex;
   padding-left: 2rem;
   padding-right: 2rem;
   text-align: center;
-  background-color: #f5f5f5;
-  @include clearfix();
+  background-color: #fff;
+  @include userSelect(none);
   > .nav-bar-title, .nav-bar-left, .nav-bar-right {
-    @include flex-center();
+    @extend .flex-box--center;
   }
   > .nav-bar-title {
-    flex: 1;
+    @extend .flex1;
     font-size: $font-size-h1;
   }
 }
@@ -100,21 +113,27 @@ a { text-decoration: none; }
 //
 //
 .btn {
+  position: relative;
   display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.5rem;
   text-align: center;
+  text-decoration: none;
   text-shadow: 0 -1 rgba(0,0,0,.25);
   background-color: transparent;
   background-repeat: no-repeat;
   border-radius: 3px;
-  -webkit-user-select: none;
+  cursor: pointer;
+  @include userSelect(none); 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .btn-submit {
   @extend .btn;
-  @extend .border-base;
   font-size: 1rem;
   color: #fff;
   background-image: linear-gradient(#fafafa, #eaeaea);
+  border: 1px solid $border-color-ee;
 }
 
 //  Text
@@ -186,8 +205,30 @@ a { text-decoration: none; }
 //  Border
 //
 //
-.border-base {
+.bubble {
+  padding: 0;
+  margin: 0 1.5rem 1.5rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 1px solid $border-color-ee;
+  border-radius: 3px;
+  overflow: hidden;
+
+  @at-root .bubble-title {
+    display: block;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1.4rem;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+  }
+  @at-root .bubble-title--bg68 {
+    @extend .bubble-title;
+    background-color: #686868;
+  }
+  @at-root .bubble-content {
+  }
 }
 
 //  Corner Radius
@@ -210,3 +251,12 @@ a { text-decoration: none; }
 //  Icon
 //
 //
+.icon {
+  position: relative;
+  display: inline-block;
+  line-height: 1.25rem;
+  vertical-align: text-bottom;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
