@@ -1,6 +1,6 @@
 // Colors
 //
-// 主要定义了灰色 
+// 主要定义了灰色
 
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
@@ -9,6 +9,9 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 $yellow-lighter:            #fffbe2 !default;
+$black-gray:                #586873 !default;
+
+$text-green:                #55a532 !default;
 
 $brand-primary:             #0275d8 !default;
 
@@ -88,11 +91,8 @@ $font-size-h5: 1.25rem !default;
 $font-size-h6: 1rem !default;
 
 $small-font-size: 80% !default;
-
 $text-muted: $gray-light !default;
-
 $list-inline-padding: 5px !default;
-
 
 // Components
 //
@@ -106,6 +106,7 @@ $line-height-sm:         1.5 !default;
 $border-radius:          .25rem !default;
 $border-radius-lg:       .3rem !default;
 $border-radius-sm:       .2rem !default;
+$border-color-ee:        #eee !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
