@@ -1,43 +1,208 @@
-@import './_variables.scss';
+/*
+ *
+ *
+ *
+ *  如何组织CSS：http://www.zhangxinxu.com/wordpress/2010/07/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E5%AF%B9%E7%BD%91%E7%AB%99css%E8%BF%9B%E8%A1%8C%E6%9E%B6%E6%9E%84%E7%9A%84/
+ *
+ *
+ *
+ */
 
-html,body {
-  font-size: 62.5%; /* 16 * 62.5% = 10 */
+@import './_variables.scss';
+@import './mixins/_clearfix.scss';
+
+html,
+body {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  font-family: $font-family-base;
 }
-.group {
+
+/**************/
+/* Left Style */
+/**************/
+// 如果你使用了预处理器，那这部分最好存放在变量里
+
+//  Color
+//
+//
+
+//  Background Color
+//
+//
+.bg68 {
+  background-color: #686868;
 }
-.group .last {
-  background-clip: padding-box;
-  border-bottom-left-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
-  border-bottom-style: solid;
-  border-bottom-width: 0.1rem;
+
+//  Margin
+//
+//
+
+//  Padding
+//
+//
+
+//  Width
+//
+//
+
+//  Height
+//
+//
+
+//  Flex
+//
+//
+.flex1 {
+  flex: 1;
 }
-.group .first {
-  background-clip: padding-box;
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
-  border-bottom-style: solid;
-  border-bottom-width: 0.1rem;
+.flex0 {
+  flex: 0;
+}
+
+/**************/
+/* Components */
+/**************/
+
+// Navigation Bar
+//
+//
+.nav-bar {
+  background-color: #f5f5f5;
+  @include clearfix();
+  > .nav-bar-title {
+    flex: 1;
+    font-size: $font-size-h1;
+  }
+  > .nav-bar-left {
+    float: left;
+    width: 20%;
+  }
+  > .nav-bar-right {
+    float: right;
+    width: 20%;
+  }
+}
+
+// Nav
+//
+//
+.nav {
+  text-align: left;
+}
+.nav li {
+  padding: $spacer;
 }
 
 //  Button
 //
 //
 .btn {
-  padding: 0.5rem;
-  font-size: 1rem;
-  color: #fff;
+  display: inline-block;
+  text-align: center;
   text-shadow: 0 -1 rgba(0,0,0,.25);
-  border-radius: $border-radius/2;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-radius: 3px;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.btn--lightpurple {
+.btn-submit {
   @extend .btn;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.1)) no-repeat #627aad;
-}
-.btn--green {
-  @extend .btn;
-  background: linear-gradient(#75ab4b, #4a8532) no-repeat #fff;
+  font-size: 1rem;
+  color: #fff;
+  background-image: linear-gradient(#fafafa, #eaeaea);
 }
 
+//  Text
+//
+//
+.text {
+  min-height: 3.4rem;
+  padding: .6rem .8rem;
+  color: #333;
+  line-height: 1.5;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.075);
+  outline: none;
+
+  &.focus,
+  &:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.075),
+                      0 0 5px rgba(81, 167, 232, .5);
+  }
+}
+
+//  Link
+//
+//
+.link {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:visited {
+  }
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &:active {
+  }
+}
+
+//  List
+//
+//
+.list {
+  padding-left: 0;
+  background-color: #fff;
+  list-style-type: none;
+}
+.list-item {
+  width: 100%;
+  padding: 1.4rem 1.5rem 1.4rem 3.5rem;
+  border-bottom: 1px solid $border-color-ee;
+  @include clearfix();
+  > .icon {
+    vertical-align: middle;
+  }
+  > .list-item-title {
+    font-weight: 600;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+  > .meta {
+    float: right;
+    font-size: 1.1rem;
+    color: #999;
+  }
+}
+
+//  Border
+//
+//
+.border-base {
+  border: 1px solid $border-color-ee;
+}
+
+//  Corner Radius
+//
+//
+.radius-base {
+  border-radius: 5px;
+}
+.radius-sm {
+  border-radius: 3px;
+}
+.radius-
+.radius-lg {
+  border-radius: 8px;
+}
+.round {
+  border-radius: 50%;
+}
+
+//  Icon
+//
+//
