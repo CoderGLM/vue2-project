@@ -8,6 +8,7 @@
 .db { display: block!important; }
 .di { display: inline!important; }
 .dib { display: inline-block!important; }
+.df { display: flex!important; }
 .dt { display: table!important; }
 
 .w1of1 { width: 100%!important; }
@@ -38,6 +39,15 @@
 .ml1 { margin-left: 1rem; }
 .ml2 { margin-left: 2rem; }
 .ml3 { margin-left: 3rem; }
+.mx0p5 { margin-left: .5rem; margin-right: .5rem; }
+.mx1 { margin-left: 1rem; margin-right: 1rem; }
+.mx2 { margin-left: 2rem; margin-right: 2rem; }
+.mx3 { margin-left: 3rem; margin-right: 3rem; }
+.my0p5 { margin-top: .5rem; margin-bottom: .5rem; }
+.my1 { margin-top: 1rem; margin-bottom: 1rem; }
+.my2 { margin-top: 2rem; margin-bottom: 2rem; }
+.my3 { margin-top: 3rem; margin-bottom: 3rem; }
+
 
 .p0 { padding: 0; }
 .p0p5 { padding: .5rem; }
@@ -54,6 +64,13 @@
 .pl0p5 { padding-left: .5rem; }
 .pl1 { padding-left: 1rem; }
 .pl2 { padding-left: 2rem; }
+.px0p5 { padding-left: .5rem; padding-right: .5rem; }
+.px1 { padding-left: 1rem; padding-right: 1rem; }
+.px2 { padding-left: 2rem; padding-right: 2rem; }
+.py0p5 { padding-top: .5rem; padding-bottom: .5rem; }
+.py1 { padding-top: 1rem; padding-bottom: 1rem; }
+.py2 { padding-top: 2rem; padding-bottom: 2rem; }
+
 
 .fn { float: none!important; }
 .fl { float: left!important; }
@@ -94,6 +111,7 @@
 .clr6 { color: #666; }
 .clr9 { color: #999; }
 .clrc { color: #ccc; }
+.clrf { color: #fff; }
 
 .hl { text-align: left!important; }
 .hc { text-align: center!important; }
@@ -114,6 +132,7 @@
 .bg6 { background-color: #666; }
 .bg9 { background-color: #999; }
 .bgc { background-color: #ccc; }
+.bgf { background-color: #fff; }
 
 /* misc */
 .oh { overflow: hidden; }
