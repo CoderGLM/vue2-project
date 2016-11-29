@@ -90,27 +90,27 @@
 .serif { font-family: Georgia, "Times New Roman", Times, serif; }
 .monospace { font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace }
 
-.fs0 { font-size: 0; }
-.fs12 { font-size: 12px; }
-.fs16 { font-size: 16px; }
-.fs24 { font-size: 24px; }
-.fs-n { font-size: 1rem; }
-.fs-lg { font-size: 1.25rem; }
-.fs-sm { font-size: .875rem; }
-.fs-xs { font-size: .75rem; }
+.fs0 { font-size: 0!important; }
+.fs12 { font-size: 12px!important; }
+.fs16 { font-size: 16px!important; }
+.fs24 { font-size: 24px!important; }
+.fs-n { font-size: 1rem!important; }
+.fs-lg { font-size: 1.25rem!important; }
+.fs-sm { font-size: .875rem!important; }
+.fs-xs { font-size: .75rem!important; }
 
 .fwn { font-weight: normal!important; }
 .fwb { font-weight: bold!important; }
 
-.lh1p5 { line-height: 1.5;  }
-.lh1p2 { line-height: 1.2;  }
+.lh1p5 { line-height: 1.5!important;  }
+.lh1p2 { line-height: 1.2!important;  }
 
-.clr0 { color: #000; }
-.clr3 { color: #333; }
-.clr6 { color: #666; }
-.clr9 { color: #999; }
-.clrc { color: #ccc; }
-.clrf { color: #fff; }
+.clr0 { color: #000!important; }
+.clr3 { color: #333!important; }
+.clr6 { color: #666!important; }
+.clr9 { color: #999!important; }
+.clrc { color: #ccc!important; }
+.clrf { color: #fff!important; }
 
 .hl { text-align: left!important; }
 .hc { text-align: center!important; }
