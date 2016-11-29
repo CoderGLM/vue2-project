@@ -18,59 +18,58 @@
 .w1of3 { width: 33.333333333333333%!important; }
 .w1of2 { width: 50%!important; }
 
-.m0 { margin: 0; }
-.m1 { margin: 1rem; }
-.m2 { margin: 2rem; }
-.m3 { margin: 3rem; }
-.m0p5 { margin: .5rem; }
-.mt0p5 { margin-top: .5rem; }
-.mt1 { margin-top: 1rem; }
-.mt2 { margin-top: 2rem; }
-.mt3 { margin-top: 3rem; }
-.mr0p5 { margin-right: .5rem; }
-.mr1 { margin-right: 1rem; }
-.mr2 { margin-right: 2rem; }
-.mr3 { margin-right: 3rem; }
-.mb0p5 { margin-bottom: .5rem; }
-.mb1 { margin-bottom: 1rem; }
-.mb2 { margin-bottom: 2rem; }
-.mb3 { margin-bottom: 3rem; }
-.ml0p5 { margin-left: .5rem; }
-.ml1 { margin-left: 1rem; }
-.ml2 { margin-left: 2rem; }
-.ml3 { margin-left: 3rem; }
-.mx0p5 { margin-left: .5rem; margin-right: .5rem; }
-.mx1 { margin-left: 1rem; margin-right: 1rem; }
-.mx2 { margin-left: 2rem; margin-right: 2rem; }
-.mx3 { margin-left: 3rem; margin-right: 3rem; }
-.my0p5 { margin-top: .5rem; margin-bottom: .5rem; }
-.my1 { margin-top: 1rem; margin-bottom: 1rem; }
-.my2 { margin-top: 2rem; margin-bottom: 2rem; }
-.my3 { margin-top: 3rem; margin-bottom: 3rem; }
+.m0 { margin: 0!important; }
+.m1 { margin: 1rem!important; }
+.m2 { margin: 2rem!important; }
+.m3 { margin: 3rem!important; }
+.m0p5 { margin: .5rem!important; }
+.mt0p5 { margin-top: .5rem!important; }
+.mt1 { margin-top: 1rem!important; }
+.mt2 { margin-top: 2rem!important; }
+.mt3 { margin-top: 3rem!important; }
+.mr0p5 { margin-right: .5rem!important; }
+.mr1 { margin-right: 1rem!important; }
+.mr2 { margin-right: 2rem!important; }
+.mr3 { margin-right: 3rem!important; }
+.mb0p5 { margin-bottom: .5rem!important; }
+.mb1 { margin-bottom: 1rem!important; }
+.mb2 { margin-bottom: 2rem!important; }
+.mb3 { margin-bottom: 3rem!important; }
+.ml0p5 { margin-left: .5rem!important; }
+.ml1 { margin-left: 1rem!important; }
+.ml2 { margin-left: 2rem!important; }
+.ml3 { margin-left: 3rem!important; }
+.mx0p5 { margin-left: .5rem!important; margin-right: .5rem!important; }
+.mx1 { margin-left: 1rem!important; margin-right: 1rem!important; }
+.mx2 { margin-left: 2rem!important; margin-right: 2rem!important; }
+.mx3 { margin-left: 3rem!important; margin-right: 3rem!important; }
+.my0p5 { margin-top: .5rem!important; margin-bottom: .5rem!important; }
+.my1 { margin-top: 1rem!important; margin-bottom: 1rem!important; }
+.my2 { margin-top: 2rem!important; margin-bottom: 2rem!important; }
+.my3 { margin-top: 3rem!important; margin-bottom: 3rem!important; }
 
 
-.p0 { padding: 0; }
-.p0p5 { padding: .5rem; }
-.p1 { padding: 1rem; }
-.pt0p5 { padding-top: .5rem; }
-.pt1 { padding-top: 1rem; }
-.pt2 { padding-top: 2rem; }
-.pr0p5 { padding-right: .5rem; }
-.pr1 { padding-right: 1rem; }
-.pr2 { padding-right: 2rem; }
-.pb0p5 { padding-bottom: .5rem; }
-.pb1 { padding-bottom: 1rem; }
-.pb2 { padding-bottom: 2rem; }
-.pl0p5 { padding-left: .5rem; }
-.pl1 { padding-left: 1rem; }
-.pl2 { padding-left: 2rem; }
-.px0p5 { padding-left: .5rem; padding-right: .5rem; }
-.px1 { padding-left: 1rem; padding-right: 1rem; }
-.px2 { padding-left: 2rem; padding-right: 2rem; }
-.py0p5 { padding-top: .5rem; padding-bottom: .5rem; }
-.py1 { padding-top: 1rem; padding-bottom: 1rem; }
-.py2 { padding-top: 2rem; padding-bottom: 2rem; }
-
+.p0 { padding: 0!important; }
+.p0p5 { padding: .5rem!important; }
+.p1 { padding: 1rem!important; }
+.pt0p5 { padding-top: .5rem!important; }
+.pt1 { padding-top: 1rem!important; }
+.pt2 { padding-top: 2rem!important; }
+.pr0p5 { padding-right: .5rem!important; }
+.pr1 { padding-right: 1rem!important; }
+.pr2 { padding-right: 2rem!important; }
+.pb0p5 { padding-bottom: .5rem!important; }
+.pb1 { padding-bottom: 1rem!important; }
+.pb2 { padding-bottom: 2rem!important; }
+.pl0p5 { padding-left: .5rem!important; }
+.pl1 { padding-left: 1rem!important; }
+.pl2 { padding-left: 2rem!important; }
+.px0p5 { padding-left: .5rem!important; padding-right: .5rem!important; }
+.px1 { padding-left: 1rem!important; padding-right: 1rem!important; }
+.px2 { padding-left: 2rem!important; padding-right: 2rem!important; }
+.py0p5 { padding-top: .5rem!important; padding-bottom: .5rem!important; }
+.py1 { padding-top: 1rem!important; padding-bottom: 1rem!important; }
+.py2 { padding-top: 2rem!important; padding-bottom: 2rem!important; }
 
 .fn { float: none!important; }
 .fl { float: left!important; }
@@ -133,6 +132,9 @@
 .bg9 { background-color: #999; }
 .bgc { background-color: #ccc; }
 .bgf { background-color: #fff; }
+
+.vh { visibility: hidden; }
+.vv { visibility: visible; }
 
 /* misc */
 .oh { overflow: hidden; }
