@@ -8,8 +8,10 @@ import AuthPage from './components/AuthPage'
 import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
 import AboutPage from './components/AboutPage'
-import UserPage from './components/UserPage'
-import Repos from './components/Repos'
+
+import ProfilePage from './components/profile/ProfilePage'
+import UserPage from './components/profile/UserPage'
+import ReposPage from './components/profile/ReposPage'
 
 import WedgetsPage from './components/wedgets/WedgetsPage'
 import ShoppingPage from './components/wedgets/ShoppingPage'
@@ -42,12 +44,22 @@ var router = new Router({
       component: AboutPage
     },
     {
-      path: '/user',
-      component: UserPage
-    },
-    {
-      path: '/repos',
-      component: Repos
+      path: '/profile',
+      component: ProfilePage,
+      children: [
+        {
+          path: 'user',
+          component: UserPage
+        },
+        {
+          path: 'repos',
+          component: ReposPage
+        },
+        {
+          path: '*',
+          component: UserPage
+        }
+      ]
     },
     {
       path: '/wedgets',
