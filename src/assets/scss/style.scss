@@ -12,8 +12,8 @@
 @import './mixins/_flex';
 @import './mixins/_clearfix';
 @import './mixins/_userSelect';
-@import './glm.lib';
 @import './reset';
+@import './glm.lib';
 
 html,
 body {
@@ -90,13 +90,26 @@ a { text-decoration: none; }
   text-align: center;
   background-color: #fff;
   border-bottom: 1px solid $gray-lighter;
+  z-index: 1;
   @include userSelect(none);
-  > .nav-bar-title, .nav-bar-left, .nav-bar-right {
+  @at-root .nav-bar-title, .nav-bar-left, .nav-bar-right {
     @extend .flex-box--center;
   }
-  > .nav-bar-title {
+  @at-root .nav-bar-title {
     @extend .flex1;
     font-size: $font-size-h1;
+  }
+  @at-root .nav-bar-tabs {
+    position: absolute;
+    top: $nav-bar-height;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: inset 0 1px 0 #fff, 0 8px 10px rgba(0,0,0,.15);
+    li {
+      padding: 1rem 2rem;
+    }
   }
 }
 
@@ -207,12 +220,29 @@ a { text-decoration: none; }
   }
 }
 
+//  Slider
+//
+//
+.slider {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  @at-root .slider-item {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    color: #333;
+  }
+}
+
 //  Border
 //
 //
 .bubble {
   padding: 0;
-  margin: 0 1.5rem 1.5rem;
   word-break: break-all;
   word-wrap: break-word;
   overflow-wrap: break-word;

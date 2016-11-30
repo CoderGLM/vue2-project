@@ -48,7 +48,6 @@
 .my2 { margin-top: 2rem!important; margin-bottom: 2rem!important; }
 .my3 { margin-top: 3rem!important; margin-bottom: 3rem!important; }
 
-
 .p0 { padding: 0!important; }
 .p0p5 { padding: .5rem!important; }
 .p1 { padding: 1rem!important; }
@@ -111,6 +110,7 @@
 .clr9 { color: #999!important; }
 .clrc { color: #ccc!important; }
 .clrf { color: #fff!important; }
+.clr-cur { color : currentColor; }
 
 .hl { text-align: left!important; }
 .hc { text-align: center!important; }
@@ -132,6 +132,7 @@
 .bg9 { background-color: #999; }
 .bgc { background-color: #ccc; }
 .bgf { background-color: #fff; }
+.bg-cur { background-color: currentColor; }
 
 .vh { visibility: hidden; }
 .vv { visibility: visible; }
