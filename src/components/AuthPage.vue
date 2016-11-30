@@ -28,7 +28,7 @@ export default {
         this.content = '授权失败'
       }
       Vue.localStorage.setItem('access_token', accessToken)
-      this.$router.push({ path: '/user' })
+      this.$router.push({ path: '/profile/user' })
     }).catch((err) => {
       console.log(err)
     })
