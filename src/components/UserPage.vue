@@ -134,6 +134,7 @@
 import Vue from 'vue'
 import { mapGetters, mapActions } from 'vuex'
 import PageHeader from './shared/PageHeader'
+import PageFooter from './shared/PageFooter'
 
 export default {
   name: 'UserPage',
@@ -143,7 +144,8 @@ export default {
     }
   },
   components: {
-    PageHeader
+    PageHeader,
+    PageFooter
   },
   computed: {
     ...mapGetters({
