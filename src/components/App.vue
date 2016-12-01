@@ -25,7 +25,7 @@ export default {
 
 .expand-enter-active, .expand-leave-active {
   position: absolute;
-  transition: all 1.25s linear;
+  transition: all .25s linear;
 }
 .expand-enter, .expand-leave-active {
   left: vm;
