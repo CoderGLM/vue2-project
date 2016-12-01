@@ -19,20 +19,30 @@
     <section class="reponav-wrapper">
       <nav class="reponav slider">
         <router-link to="/profile/user">
-          <a class="reponav-item slider-item selected">Overview</a>
+          <a class="reponav-item slider-item" :class="{selected: selectedIndex===0}" @click="selectedIndex=0">
+            Overview
+          </a>
         </router-link>
         <router-link to="/profile/repos">
-          <a class="reponav-item slider-item">Repositories <small v-html="profile.public_repos"></small></a>
+          <a class="reponav-item slider-item" :class="{selected: selectedIndex===1}" @click="selectedIndex=1">
+            Repositories <small v-html="profile.public_repos"></small>
+          </a>
         </router-link>
-        <a class="reponav-item slider-item">Stars&ensp;<small v-html="profile.public_repos">0</small></a>
-        <a class="reponav-item slider-item" :href="profile.followers_url">Followers&ensp;<small v-html="profile.followers">0</small></a>
-        <a class="reponav-item slider-item" :href="profile.following_url">Following&ensp;<small v-html="profile.following">0</small></a>
+        <a>
+          Stars&ensp;<small v-html="profile.public_repos">0</small>
+        </a>
+        <a class="reponav-item slider-item" :href="profile.followers_url">
+          Followers&ensp;<small v-html="profile.followers">0</small>
+        </a>
+        <a class="reponav-item slider-item" :href="profile.following_url">
+          Following&ensp;<small v-html="profile.following">0</small>
+        </a>
       </nav>
     </section>
 
-    <transition name="slide">
-        <router-view keep-alive>
-        </router-view>
+    <transition name="expand">
+      <router-view keep-alive>
+      </router-view>
     </transition>
 
     <page-footer></page-footer>
@@ -47,6 +57,11 @@ import PageFooter from '../shared/PageFooter'
 
 export default {
   name: 'ProfilePage',
+  data () {
+    return {
+      selectedIndex: 0
+    }
+  },
   components: {
     PageHeader,
     PageFooter
@@ -87,13 +102,4 @@ export default {
     }
   }
 }
-
-.slide-enter-active, .slide-leave-active {
-  position: absolute;
-  transition: all .25s linear;
-}
-.slide-enter, .slide-leave-active {
-  opacity: 0;
-}
-
 </style>
